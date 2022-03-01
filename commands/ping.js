@@ -10,11 +10,14 @@ module.exports = {
 
 	async execute(interaction, client) {
 
-        // Log Console
-        client.logger.log('info', `stats.js used by ${interaction.user.tag} (${interaction.user.id}) in #${interaction.channel.name} ( Server : ${interaction.guild.name} & ${interaction.guild.id})`);
+        const embed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('Pong !')
 
-        await interaction.deferReply();
-        await interaction.editReply('Pong !');
+        // Log Console
+        client.logger.log('info', `ping.js used by ${interaction.user.tag} (${interaction.user.id}) in #${interaction.channel.name} ( Server : ${interaction.guild.name} & ${interaction.guild.id})`);
+
+        return interaction.reply({embeds: [embed]});
 
 
 	},
