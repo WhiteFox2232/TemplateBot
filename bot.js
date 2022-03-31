@@ -27,7 +27,7 @@ for (const file of commandFiles) {
 client.once('ready', c => {
 	client.logger.log('info', `Bot en ligne sous l'identité ${c.user.tag} (${c.user.id})`);
 	client.user.setStatus('idle');
-	client.user.setActivity('IP Bot - Verif an IP adress', { type: 'PLAYING' });
+	client.user.setActivity('a Discord Bot', { type: 'PLAYING' });
 });
 
 client.on('interactionCreate', async interaction => {
